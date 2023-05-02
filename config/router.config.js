@@ -14,6 +14,7 @@ module.exports = app => {
     app.put("/api/user/updateUserInfo/:_id",checkToken,user.updateUserInfo);
     // 商品接口
     app.get("/api/shop/getShopList/:_id", shop.getShopList);
+    app.get("/api/shop/getShopListByPage", shop.getShopListByPage);
     // 错误处理(你的路由不可以写在这后面)
     app.use(errorList.notFind);
     // 500错误

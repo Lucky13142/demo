@@ -28,5 +28,37 @@ class ShopList {
             console.log(error);
         }
     }
+    // 获取商品列分页显示
+    async getShopListByPage(req, res) {
+        try {
+            let { page, pageSize } = req.query;
+            page = parseInt(page);
+            pageSize = parseInt(pageSize);
+            const data = await Shop.find()
+            const goods = await Shop.find()
+                .skip((page - 1) * pageSize)
+                .limit(pageSize);
+                console.log(data);
+            // 如果没有数据 则不接受此次请求
+            if (!goods.length) {
+                res.send({
+                    code: 400,
+                    message: "没有更多数据了",
+                });
+                return;
+            }
+           
+            res.send({
+                code: 200,
+                message: "获取成功",
+                total:data.length,
+                page,
+                pageSize:goods.length,
+                goods,
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 module.exports = new ShopList();
