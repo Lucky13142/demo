@@ -1,0 +1,33 @@
+# 测试接口用的文件 需要下载插件REST Client 自行下载
+GET http://localhost:3000 HTTP/1.1"
+###
+POST http://localhost:3000/api/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "123456",
+    "email": "1314520@qq.com",
+    "phone":1234566
+}
+###
+POST http://localhost:3000/api/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "xixi",
+    "password": "123456"
+}
+###
+GET http://localhost:3000/api/user/getUserInfo/644b5e98ccec8db7bbf379f9 HTTP/1.1
+authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjQ0YjVlOThjY2VjOGRiN2JiZjM3OWY5Iiwic3RhcnRUaW1lIjoxNjgyOTI5MDQ1Mzk1LCJleHAiOjE2ODI5MjkxMDUzOTUsImlhdCI6MTY4MjkyOTA0NX0.ih_iZSL_NoElxDNwPRvjfEKXPAOUpwSYBqd0npE0q3s
+###
+PUT http://localhost:3000/api/user/updateUserInfo/644f78cc53647fd6b41299cb HTTP/1.1
+authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjQ0Zjc4Y2M1MzY0N2ZkNmI0MTI5OWNiIiwic3RhcnRUaW1lIjoxNjgyOTMxMTk3NjI5LCJleHAiOjE2ODI5MzEyNTc2MjksImlhdCI6MTY4MjkzMTE5N30.gRXemlrohOm7YrxfVZCFjBg2JfuDyuAHNwdmwXKKOT0
+
+
+{
+    "username":"admin",
+    "email":"123456@qq.com",
+    "phone":123
+}
