@@ -37,17 +37,7 @@ class ShopList {
             const data = await Shop.find()
             const goods = await Shop.find()
                 .skip((page - 1) * pageSize)
-                .limit(pageSize);
-                console.log(data);
-            // 如果没有数据 则不接受此次请求
-            if (!goods.length) {
-                res.send({
-                    code: 400,
-                    message: "没有更多数据了",
-                });
-                return;
-            }
-           
+                .limit(pageSize);   
             res.send({
                 code: 200,
                 message: "获取成功",

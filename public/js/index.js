@@ -73,7 +73,7 @@ function getScrollHeight() {
 }
 //滚动加载
 function fn(){
-    if (getScrollTop() + getClientHeight() >= getScrollHeight() - 200) {  
+    if (getScrollTop() + getClientHeight() >= getScrollHeight() - 500) {  
             getShopList(page, pageSize)  
     }
 }

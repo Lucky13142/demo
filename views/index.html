@@ -6,13 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../public/css/base.css">
     <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
     <link rel="shortcut icon" href=" ../public/favicon.ico" />
 </head>
 <body>
+    <!-- 引入顶部导航栏 -->
+    {{include './header.html'}}
     <!-- 瀑布流 1.页面布局-->
     <div class="goods-list">
     </div>
+    {{include './footer.html'}}
 </body>
 <script src="../public/utils/ajax.js"></script>
 <script src="../public/js/index.js"></script>

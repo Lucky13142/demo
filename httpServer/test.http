@@ -34,4 +34,4 @@ authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjQ0Zjc4Y2M1MzY0N
 ###
 GET http://localhost:3000/api/shop/getShopList/6450a05b627a000034002db2 HTTP/1.1
 ###
-GET http://localhost:3000/api/shop/getShopListByPage HTTP/1.1
+GET http://localhost:3000/api/shop/getShopListByPage/2/2 HTTP/1.1
